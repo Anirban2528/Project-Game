@@ -63,9 +63,9 @@ def game():
           if event.type == pygame.KEYDOWN:
               if event.key == pygame.K_BACKSPACE:
                   user_text = user_text[:-1]
-              elif event.unicode!=chr(13):
+              elif event.unicode!=chr(13) and event.unicode!=chr(92):
                   user_text += event.unicode
-              elif event.unicode==chr(13):
+              elif event.unicode==chr(13) and len(user_text)>0:
                   k = True
                   break
       if k==True:
