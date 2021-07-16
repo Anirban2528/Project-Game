@@ -1,6 +1,6 @@
 ## I AM A HUNTER
 
-*** This project is about a shooting game completely developed using Python and pygame module.
+* This project is about a shooting game completely developed using Python and pygame module.
 
 ## About
 
