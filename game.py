@@ -137,6 +137,8 @@ def game():
             for event in pygame.event.get():
               if event.type==pygame.MOUSEBUTTONUP:
                 life-=1
+                display_surface.blit(hunter_fire,(75,300))
+                mixer.Sound.play(boom)
             if life==0:
               active = True
               mixer.music.stop()
@@ -151,7 +153,7 @@ def game():
               y_score = Font.render('{}'.format(score), False, 'black','#4CBA39')
               while active:
                   if loops==3 and entry==0:
-                    pygame.music.play()
+                    mixer.music.play()
                     entry=1
                   display_surface.blit(gameover,(0,0))
                   display_surface.blit(y_score,(365,220))
